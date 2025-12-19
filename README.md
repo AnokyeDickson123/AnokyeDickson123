@@ -61,7 +61,7 @@ $$
 
 
 ---
-## Flowchart illustrating the integration of high frequency data into a Hybrid volatility prediction model (Parallel and Sequential).
+### Flowchart illustrating the integration of high frequency data into a Hybrid volatility prediction model (Parallel and Sequential).
 <p align="center">
   <img src="fl.png" width="550" height="500">
 </p>
@@ -85,7 +85,7 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 ---
 
 
-## Visual representation of the Actual Volatility of the S&P 500 data
+### Visual representation of the Actual Volatility of the S&P 500 data
 ![](Actualvol.png)
 
 
@@ -94,7 +94,7 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 ---
 
 
-## Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in sequential architectures, showing improved accuracy with more paths.
+### Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in sequential architectures, showing improved accuracy with more paths.
 
 ![](pltsq.png)
 
@@ -105,7 +105,7 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 ---
 
 
-## Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in parallel architectures, showing improved accuracy with more paths.
+### Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in parallel architectures, showing improved accuracy with more paths.
 
 ![](pltpar.png)
 
@@ -115,7 +115,7 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 
 ---
 
-## visual representation of the performance comparison between sequential and parallel architectures for the stochastic-driven AI hybrid models using varying numbers (10, 50, 100, 500) of simulated paths.
+### visual representation of the performance comparison between sequential and parallel architectures for the stochastic-driven AI hybrid models using varying numbers (10, 50, 100, 500) of simulated paths.
 
 ![](ah.png)
 
@@ -137,4 +137,20 @@ Overall, these findings highlight the practical advantages of hybrid modeling fr
 
 ---
 
-## Visual representation of actual volatility and predicted volatility using the parallel setup with Poisson-OU model and stacked LSTM (3-layer) averaged over 500 simulation paths
+### Visual representation of actual volatility and predicted volatility using the parallel setup with Poisson-OU model and stacked LSTM (3-layer) averaged over 500 simulation paths
+
+![](hmm.png)
+
+
+
+
+
+## CONCLUSION
+
+This project proposes a hybrid volatility forecasting framework that integrates Lévy-driven stochastic volatility models with deep learning architectures—specifically Long Short-Term Memory (LSTM) networks—to improve crash risk prediction in financial markets. The central objective is to bridge the gap between the theoretical rigor of stochastic modeling and the adaptive learning capabilities of artificial intelligence, thereby enhancing the detection of nonlinear dynamics, volatility spikes, and early-warning signals in high-frequency financial environments.
+
+To achieve this objective, three stochastic volatility models were developed and calibrated using Maximum Likelihood Estimation (MLE): the Gamma–Ornstein–Uhlenbeck (Gamma-OU), Poisson–Ornstein–Uhlenbeck (Poisson-OU), and Jump-Diffusion Ornstein–Uhlenbeck (JD-OU) processes. These models are designed to capture key market characteristics, including mean reversion, heavy-tailed behavior, and abrupt jump dynamics, which are commonly observed during periods of financial stress.
+
+Each stochastic model was integrated with two variants of LSTM networks—vanilla and stacked—under both sequential and parallel learning configurations. Model performance was evaluated using the Root Mean Squared Error (RMSE) across multiple simulation scenarios with varying numbers of simulated paths. The empirical results demonstrate that parallel learning configurations consistently outperform sequential setups across all stochastic models, with performance gains becoming more pronounced as the number of simulated paths increases.
+
+Furthermore, stacked LSTM architectures, although computationally more intensive, generally yield superior predictive accuracy compared to vanilla LSTMs, particularly when combined with the Poisson-OU and JD-OU models. These deeper architectures are more effective in capturing long-range dependencies and nonlinear temporal patterns in volatility time series. Among all configurations evaluated, the Poisson-OU model integrated with a stacked LSTM under a parallel configuration achieves the lowest RMSE, confirming its robustness in modeling discrete volatility shocks and its suitability for capturing abrupt regime transitions in financial markets.
