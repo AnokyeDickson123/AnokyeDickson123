@@ -108,3 +108,13 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 ## Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in parallel architectures, showing improved accuracy with more paths.
 
 ![](pltpar.png)
+
+
+
+
+
+---
+
+## visual representation of the performance comparison between sequential and parallel architectures for the stochastic-driven AI hybrid models using varying numbers (10, 50, 100, 500) of simulated paths.
+
+![](ah.png)
