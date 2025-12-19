@@ -87,7 +87,7 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 
 ## Visual representation of the Actual Volatility of the S&P 500 data
 <p align="center">
-  <img src="fl.png" width="550" height="500">
+  <img src="Actualvol.png" width="550" height="700">
 </p>
 
 
