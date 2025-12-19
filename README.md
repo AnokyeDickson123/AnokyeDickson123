@@ -86,9 +86,25 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 
 
 ## Visual representation of the Actual Volatility of the S&P 500 data
-<p align="center">
-  <img src="Actualvol.png" width="550" height="700">
-</p>
+![](Actualvol.png)
 
 
 
+
+---
+
+
+## Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in sequential architectures, showing improved accuracy with more paths.
+
+![](pltsq.png)
+
+
+
+
+
+---
+
+
+## Visual representation of the performance comparison of stochastic-driven hybrid models (Gamma-OU, Poisson-OU, JD-OU) using RMSE across simulated paths (10, 50, 100, 500) in parallel architectures, showing improved accuracy with more paths.
+
+![](pltpar.png)
