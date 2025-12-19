@@ -60,6 +60,22 @@ $$
 
 
 
+---
+## Flowchart illustrating the integration of high frequency data into a Hybrid volatility prediction model (Parallel and Sequential).
+<p align="center">
+  <img src="fl.png" width="550" height="500">
+</p>
+
+
+---
+
+
+
+## Data Description
+
+This repository uses high-frequency financial data from the Standard & Poor’s 500 (S&P 500) index, a widely recognized benchmark of the U.S. equity market. The dataset consists of minute-level price observations collected between April 3, 2017 (13:30 UTC) and August 31, 2017 (20:00 UTC), capturing both stable and volatile market regimes.
+
+Each data record includes a timestamp and the corresponding index price. Minute-by-minute S&P 500 data is particularly well-suited for this study, as it enables the analysis of microstructural dynamics and short-term volatility fluctuations, which are essential for high-frequency crash risk prediction.
 
 
 
