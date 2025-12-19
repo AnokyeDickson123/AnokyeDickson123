@@ -118,3 +118,23 @@ Each data record includes a timestamp and the corresponding index price. Minute-
 ## visual representation of the performance comparison between sequential and parallel architectures for the stochastic-driven AI hybrid models using varying numbers (10, 50, 100, 500) of simulated paths.
 
 ![](ah.png)
+
+
+---
+
+## Key Empirical Findings
+
+This diagrams presents a comprehensive empirical evaluation of three Lévy-driven stochastic volatility models—the Gamma–Ornstein–Uhlenbeck (Gamma-OU), Poisson–Ornstein–Uhlenbeck (Poisson-OU), and Jump-Diffusion Ornstein–Uhlenbeck (JD-OU) models—and their hybrid integration with Long Short-Term Memory (LSTM) architectures using high-frequency data from the S&P 500 index.
+
+The empirical analysis demonstrates that the Poisson-OU model, when combined with a three-layer stacked LSTM in a parallel learning configuration, delivers the most accurate volatility forecasts, achieving the lowest Root Mean Squared Error (RMSE) across all evaluated setups. This comparative synthesis further confirms that the Poisson-OU + stacked LSTM + 500 simulated paths configuration consistently produces the most accurate forecasts.
+
+Across all experiments, parallel hybrid architectures consistently outperform sequential configurations, indicating a more effective integration of theoretically grounded stochastic structures with data-driven temporal learning. In addition, stacked LSTM architectures show superior predictive performance compared to vanilla LSTM models, albeit at the cost of increased computational complexity.
+
+Overall, these findings highlight the practical advantages of hybrid modeling frameworks that fuse deep learning techniques with Lévy-driven stochastic processes, particularly for capturing the nonlinear and jump-driven dynamics characteristic of modern high-frequency financial markets.
+
+
+
+
+---
+
+## Visual representation of actual volatility and predicted volatility using the parallel setup with Poisson-OU model and stacked LSTM (3-layer) averaged over 500 simulation paths
